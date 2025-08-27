@@ -73,3 +73,8 @@ It is recommended to use opinionated default sfdx-hardis delta deployment config
 
 - ALWAYS_ENABLE_DELTA_DEPLOYMENT
   - By default, delta deployment is allowed only from minor to major branches. You can force it for PR/MRs between major branches by defining variable `ALWAYS_ENABLE_DELTA_DEPLOYMENT=true`
+
+### Additionally
+
+- EXTEND_DELTA_DEPLOYMENT (or `extendDeltaDeployment` in config)
+  - will enable deployment of related metadata even it it was not changed. E.g. it would deploy CustomObjectTranslation if one of Layout was changed.
